@@ -1,4 +1,6 @@
 var request = require('request');
+var docopt = require('docopt-js');
+
 var fs = require('fs');
 
 function docParser (f) {
@@ -12,7 +14,7 @@ Usage:
   festivals search <term> [--timeout=<seconds>]
   festivals show <concept> [--timeout=<seconds>]
   festivals add <schema_url>
-  festivals scrape <file_url>
+  festivals scrape <spreadsheet_url> <file_url>
   festivals generate <schema>
   festivals -h | --help | --version
 */});
@@ -25,7 +27,8 @@ function __interface__ (config) {
     '<concept>'    : null,
     'add'          : false,
     '<schema_url>' : null,
-    'fire'         : false,
+    'scrape'         : false,
+    '<spreadsheet_url>'   : null,
     '<file_url>'   : null,
     'generate'     : false,
     '<schema>'     : null,
