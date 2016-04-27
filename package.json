@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/nerdfiles/Festivals/issues"
   },
-  "homepage": "https://github.com/nerdfiles/Festivals#readme"
+  "homepage": "https://github.com/nerdfiles/Festivals#readme",
+  "dependencies": {
+    "requests": "^0.1.7"
+  }
 }
