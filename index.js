@@ -57,24 +57,26 @@ function __interface__ (config) {
  *
  */
 
-  if (opts['fire']) {
+  if (opts['scrape']) {
     var sep = '';
     fs.readFile(__dirname + sep + opts['<file_url>'], "utf8", function (err, data) {
+      var site_root = opts['<spreadsheet_url>'];
       if (err)  throw err;
+      var _data = JSON.parse(data.fests); // array
 
       data.forEach(function (d) {
         var dataConstruct = d;
 
-          request({
-            url     : site_root + potentialAction,
-            headers : default_headers,
-            method  : 'POST',
-            body    : JSON.stringify(dataConstruct)
-          }, function (err, res, body) {
-            if (!err && res.statusCode == 200) {
-              console.log(body);
-            }
-          });
+        request({
+          url     : site_root + potentialAction,
+          headers : default_headers,
+          method  : 'POST',
+          body    : JSON.stringify(dataConstruct)
+        }, function (err, res, body) {
+          if (!err && res.statusCode === 200) {
+            console.log('Updated!')
+          }
+        });
       });
     });
   }
