@@ -16,14 +16,7 @@ async = require('async'),
 fs = require('fs');
 
 
-function docParser (f) {
-  return f.toString().
-    replace(/^[^\/]+\/\*!?/, '').
-    replace(/\*\/[^\/]+$/, '');
-}
-
-
-var doc = docParser(function () {/*!
+var doc = __parser__(function () {/*!
 Usage:
   festivals search <term> [--timeout=<seconds>]
   festivals show <concept> [--timeout=<seconds>]
@@ -32,6 +25,17 @@ Usage:
   festivals generate <schema>
   festivals -h | --help | --version
 */});
+
+
+function __parser__ (f) {
+  /// @inner
+  /// @description
+  /// Simple comment-based usage document parser.
+
+  return f.toString().
+    replace(/^[^\/]+\/\*!?/, '').
+    replace(/\*\/[^\/]+$/, '');
+}
 
 
 function __interface__ (config) {
@@ -114,8 +118,8 @@ function __interface__ (config) {
 }
 
 
-function init () {
-  /// @name init
+function __init__ () {
+  /// @name __init__
   /// @description
   /// Initialization. Collect docopt.
   var initConfig = docopt.docopt(doc, { version: '0.0.1' });
@@ -123,4 +127,4 @@ function init () {
 }
 
 
-init();
+__init__();
