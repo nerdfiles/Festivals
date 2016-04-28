@@ -14,7 +14,7 @@
 
 ## Needful
 
-    $ hxextract script austin-festivals\?page\=3 | hxclean  | hxnormalize | hxselect 'script[type="application/ld+json"]'
+    $ hxextract script austin-festivals\?page\=3 | hxclean | hxnormalize | hxselect 'script[type="application/ld+json"]'
 
     $ hxextract "div.fest-card" austin-festivals\?page\=3 | hxnormalize
 
