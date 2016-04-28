@@ -3,17 +3,7 @@ var btoa = require('btoa');
 var qs = require('querystring');
 var request = require('request');
 var async = require('async');
-
 var fs = require('fs');
-var default_headers = {
-  'User-Agent': 'Mozilla/5.0 (X11; Linux i686; rv:7.0.1) Gecko/20100101 Firefox/7.0.1',
-  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'Accept-Language': 'en-us,en;q=0.5',
-  'Accept-Encoding': 'gzip, deflate',
-  'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.7',
-  // 'Connection': 'keep-alive',
-  'Cache-Control': 'max-age=0'
-};
 
 function docParser (f) {
   return f.toString().
@@ -21,7 +11,7 @@ function docParser (f) {
     replace(/\*\/[^\/]+$/, '');
 }
 
-var doc = docParser(function() {/*!
+var doc = docParser(function () {/*!
 Usage:
   festivals search <term> [--timeout=<seconds>]
   festivals show <concept> [--timeout=<seconds>]
@@ -53,22 +43,6 @@ function __interface__ (config) {
 
   var site_root = 'https://sheetsu.com/apis/v1.0/1903d815';
   var schemaConstruct = opts['<schema_url>'];
-  //var potentialAction = '/login';
-
-  /*
-   *  var potentialAction = '';
-   *
-   *  if (opts['add'] && opts['<schema_url>'] !== null) {
-   *    var schemas = [];
-   *    schemas.push(schemaConstruct);
-   *
-   *    fs.writeFile(__dirname + "/tmp/test.list", schemas.pop(), function(err) {
-   *      if (err)  return console.log(err);
-   *    });
-   *
-   *  }
-   *
-   */
 
   if (opts['scrape']) {
     var sep = '/';
@@ -105,7 +79,7 @@ function __interface__ (config) {
               console.log('Not updated!')
             }
             console.log('/// Adding ' + tempName);
-            setTimeout(function() {
+            setTimeout(function () {
               callback(err, body);
             }, 5000); // @see https://sheetsu.com/docs/beta#rates
 
