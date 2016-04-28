@@ -17,3 +17,7 @@
     $ hxextract script austin-festivals\?page\=3 | hxclean  | hxnormalize | hxselect 'script[type="application/ld+json"]'
 
     $ hxextract "div.fest-card" austin-festivals\?page\=3 | hxnormalize
+
+## Usage
+
+    $ node index.js scrape 'https://sheetsu.com/apis/v1.0/1903d815' austin-festivals-0.scripts.html.json

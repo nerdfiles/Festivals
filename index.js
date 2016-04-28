@@ -1,4 +1,5 @@
 var docopt = require('docopt-js');
+var qs = require('querystring');
 var request = require('request');
 var async = require('async');
 
@@ -82,14 +83,19 @@ function __interface__ (config) {
         requests.push(function (callback) {
           request({
             url     : site_root + potentialAction,
-            headers : default_headers,
+            //headers : default_headers,
             method  : 'POST',
-            body    : JSON.stringify(festival)
+            //body    : qs.stringify(festival)
+            json    : festival
           }, function (err, res, body) {
             if (!err && res.statusCode === 200) {
               console.log('Not updated!')
             }
-            setTimeout(function(){ callback(err, body); }, 5000);
+            console.log(body);
+            setTimeout(function() {
+              callback(err, body);
+            }, 5000);
+
           });
 
         });
