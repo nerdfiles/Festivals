@@ -18,6 +18,10 @@
 
     $ hxextract "div.fest-card" austin-festivals\?page\=3 | hxnormalize
 
+### Dependencies
+
+1. [HTML-XML-utils](https://www.w3.org/Tools/HTML-XML-utils/)
+
 ## Example
 
     $ node index.js scrape 'https://sheetsu.com/apis/v1.0/1903d815' austin-festivals-0.scripts.html.json
