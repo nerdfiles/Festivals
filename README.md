@@ -21,6 +21,7 @@
 ### Dependencies
 
 1. [HTML-XML-utils](https://www.w3.org/Tools/HTML-XML-utils/)
+2. `wget` [https://www.everfest.com/texas/austin-festivals?page=3](https://www.everfest.com/texas/austin-festivals?page=3)
 
 ## Example
 
