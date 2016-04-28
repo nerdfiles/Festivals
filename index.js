@@ -107,7 +107,7 @@ function __interface__ (config) {
             console.log('/// Adding ' + tempName);
             setTimeout(function() {
               callback(err, body);
-            }, 5000);
+            }, 5000); // @see https://sheetsu.com/docs/beta#rates
 
           });
 
