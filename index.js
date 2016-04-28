@@ -8,12 +8,12 @@
  */
 
 var
-docopt = require('docopt-js'),
-btoa = require('btoa'),
-qs = require('querystring'),
-request = require('request'),
 async = require('async'),
-fs = require('fs');
+btoa = require('btoa'),
+docopt = require('docopt-js'),
+fs = require('fs'),
+qs = require('querystring'),
+request = require('request');
 
 
 var doc = __parser__(function () {/*!
