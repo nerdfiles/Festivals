@@ -6,18 +6,22 @@
  * Simple interface for scraping everfest.com and recording findings to Google Spreadsheet.
  * )
  */
-var docopt = require('docopt-js');
-var btoa = require('btoa');
-var qs = require('querystring');
-var request = require('request');
-var async = require('async');
-var fs = require('fs');
+
+var
+docopt = require('docopt-js'),
+btoa = require('btoa'),
+qs = require('querystring'),
+request = require('request'),
+async = require('async'),
+fs = require('fs');
+
 
 function docParser (f) {
   return f.toString().
     replace(/^[^\/]+\/\*!?/, '').
     replace(/\*\/[^\/]+$/, '');
 }
+
 
 var doc = docParser(function () {/*!
 Usage:
@@ -28,6 +32,7 @@ Usage:
   festivals generate <schema>
   festivals -h | --help | --version
 */});
+
 
 function __interface__ (config) {
   /// @name interface
@@ -108,9 +113,14 @@ function __interface__ (config) {
   }
 }
 
+
 function init () {
+  /// @name init
+  /// @description
+  /// Initialization. Collect docopt.
   var initConfig = docopt.docopt(doc, { version: '0.0.1' });
   __interface__(initConfig);
 }
+
 
 init();
