@@ -25,8 +25,15 @@
 
 ## Example
 
+Your JSON may have top-level properties which must be reflected in the first row of your spreadsheet.
+
     $ node index.js scrape 'https://sheetsu.com/apis/v1.0/1903d815' austin-festivals-0.scripts.html.json
 
 ## Review
 
 See [results spreadsheet](https://docs.google.com/spreadsheets/d/1ms1v41EiKlHvXVbYyaHUTGWI7vsitRboMYr29fksvbg/edit?usp=sharing).
+
+## TODO
+
+1. Custom JSON for ignoring properties.
+2. Build out the rest of the CLI.
