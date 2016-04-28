@@ -1,11 +1,68 @@
-<script type="application/ld+json">
-          { "@context": "http://schema.org", "@type": "Festival", "name": "Kingwood Fall Car Show", "startDate": "2016-10-10", "endDate": "2016-10-16", "image": "https://s3-us-west-2.amazonaws.com/everfest-uploads/uploads/festival_series/hosted_cover_photo/7d78789f-e8b0-4d7a-bd3a-743d32efdff2.jpg", "url": "https://www.everfest.com/e/kingwood-fall-car-show-kingwood-tx", "location": { "@type": "Place", "name": "Town Center Park", "address": "8 N Main St, Kingwood, TX 77339, US" } }
-        </script><script type="application/ld+json">
-          { "@context": "http://schema.org", "@type": "Festival", "name": "LEGO KidsFest", "startDate": "2016-10-21", "endDate": "2016-10-23", "image": "https://s3-us-west-2.amazonaws.com/everfest-uploads/uploads/festival_series/hosted_cover_photo/lego-kidsfest-nashville-tn.jpg", "url": "https://www.everfest.com/e/lego-kidsfest-multi-city", "location": { "@type": "Place", "name": "NRG Center", "address": "N Stadium Dr, Houston, TX 77054, US" } }
-        </script><script type="application/ld+json">
-          { "@context": "http://schema.org", "@type": "Festival", "name": "International Quilt Market", "startDate": "2016-10-29", "endDate": "2016-10-31", "image": "https://s3-us-west-2.amazonaws.com/everfest-uploads/uploads/festival_series/hosted_cover_photo/93115ae6-ad33-4db2-b6c3-c1ff526ff76d.jpg", "url": "https://www.everfest.com/e/international-quilt-market-multi-city", "location": { "@type": "Place", "name": "George R. Brown Convention Center", "address": "1001 Avenida De Las Americas, Houston, TX 77010, US" } }
-        </script><script type="application/ld+json">
-          { "@context": "http://schema.org", "@type": "Festival", "name": "Houston Egyptian Festival", "startDate": "2016-10-29", "endDate": "2016-10-29", "image": "https://s3-us-west-2.amazonaws.com/everfest-uploads/uploads/festival_series/hosted_cover_photo/104b10f4-236a-4c8d-afa4-55c5503cfdd6.jpg", "url": "https://www.everfest.com/e/houston-egyptian-festival-houston-tx", "location": { "@type": "Place", "name": "Discovery Green", "address": "1500 McKinney St, Houston, TX 77010, US" } }
-        </script><script type="application/ld+json">
-          { "@context": "http://schema.org", "@type": "Festival", "name": "International Quilt Festival", "startDate": "2016-11-03", "endDate": "2016-11-06", "image": "https://s3-us-west-2.amazonaws.com/everfest-uploads/uploads/festival_series/hosted_cover_photo/international-quilt-festival-houston-houston-tx.jpg", "url": "https://www.everfest.com/e/international-quilt-festival-multi-city-f63a0b3d-a9f9-435a-bb5c-bdf236a425df", "location": { "@type": "Place", "name": "George R. Brown Convention Center", "address": "1001 Avenida De Las Americas, Houston, TX" } }
-        </script>
+{
+	"fests": [{
+		"@context": "http://schema.org",
+		"@type": "Festival",
+		"name": "Kingwood Fall Car Show",
+		"startDate": "2016-10-10",
+		"endDate": "2016-10-16",
+		"image": "https://s3-us-west-2.amazonaws.com/everfest-uploads/uploads/festival_series/hosted_cover_photo/7d78789f-e8b0-4d7a-bd3a-743d32efdff2.jpg",
+		"url": "https://www.everfest.com/e/kingwood-fall-car-show-kingwood-tx",
+		"location": {
+			"@type": "Place",
+			"name": "Town Center Park",
+			"address": "8 N Main St, Kingwood, TX 77339, US"
+		}
+	}, {
+		"@context": "http://schema.org",
+		"@type": "Festival",
+		"name": "LEGO KidsFest",
+		"startDate": "2016-10-21",
+		"endDate": "2016-10-23",
+		"image": "https://s3-us-west-2.amazonaws.com/everfest-uploads/uploads/festival_series/hosted_cover_photo/lego-kidsfest-nashville-tn.jpg",
+		"url": "https://www.everfest.com/e/lego-kidsfest-multi-city",
+		"location": {
+			"@type": "Place",
+			"name": "NRG Center",
+			"address": "N Stadium Dr, Houston, TX 77054, US"
+		}
+	}, {
+		"@context": "http://schema.org",
+		"@type": "Festival",
+		"name": "International Quilt Market",
+		"startDate": "2016-10-29",
+		"endDate": "2016-10-31",
+		"image": "https://s3-us-west-2.amazonaws.com/everfest-uploads/uploads/festival_series/hosted_cover_photo/93115ae6-ad33-4db2-b6c3-c1ff526ff76d.jpg",
+		"url": "https://www.everfest.com/e/international-quilt-market-multi-city",
+		"location": {
+			"@type": "Place",
+			"name": "George R. Brown Convention Center",
+			"address": "1001 Avenida De Las Americas, Houston, TX 77010, US"
+		}
+	}, {
+		"@context": "http://schema.org",
+		"@type": "Festival",
+		"name": "Houston Egyptian Festival",
+		"startDate": "2016-10-29",
+		"endDate": "2016-10-29",
+		"image": "https://s3-us-west-2.amazonaws.com/everfest-uploads/uploads/festival_series/hosted_cover_photo/104b10f4-236a-4c8d-afa4-55c5503cfdd6.jpg",
+		"url": "https://www.everfest.com/e/houston-egyptian-festival-houston-tx",
+		"location": {
+			"@type": "Place",
+			"name": "Discovery Green",
+			"address": "1500 McKinney St, Houston, TX 77010, US"
+		}
+	}, {
+		"@context": "http://schema.org",
+		"@type": "Festival",
+		"name": "International Quilt Festival",
+		"startDate": "2016-11-03",
+		"endDate": "2016-11-06",
+		"image": "https://s3-us-west-2.amazonaws.com/everfest-uploads/uploads/festival_series/hosted_cover_photo/international-quilt-festival-houston-houston-tx.jpg",
+		"url": "https://www.everfest.com/e/international-quilt-festival-multi-city-f63a0b3d-a9f9-435a-bb5c-bdf236a425df",
+		"location": {
+			"@type": "Place",
+			"name": "George R. Brown Convention Center",
+			"address": "1001 Avenida De Las Americas, Houston, TX"
+		}
+	}]
+}
