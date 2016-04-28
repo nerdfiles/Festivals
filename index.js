@@ -1,4 +1,5 @@
 var docopt = require('docopt-js');
+var btoa = require('btoa');
 var qs = require('querystring');
 var request = require('request');
 var async = require('async');
@@ -77,21 +78,33 @@ function __interface__ (config) {
       var _data = JSON.parse(data); // array
       var potentialAction = '';
       var requests = [];
+      var API_KEY = 'noPivQpB6JZxngm3q8La';
+      var API_SECRET = 'EDohYU5TeMFJAZp6a99y4QPPvvXkdqUqZwCVCQgH';
+      var keyPair = API_KEY + ":" + API_SECRET;
 
       _data.fests.forEach(function (festival) {
+        delete festival['@context'];
+        delete festival['@type']
+        var tempName = festival.location.name;
+        if (festival.location && (festival.location.name && festival.location.address))
+          festival.locale = festival.location.name + ' / ' + festival.location.address;
+        else
+          festival.locale = festival.location.address;
+        delete festival['location'];
 
         requests.push(function (callback) {
           request({
             url     : site_root + potentialAction,
-            //headers : default_headers,
             method  : 'POST',
-            //body    : qs.stringify(festival)
-            json    : festival
+            json    : festival,
+            headers: {
+              "Authorization": "Basic " + btoa(keyPair)
+            }
           }, function (err, res, body) {
             if (!err && res.statusCode === 200) {
               console.log('Not updated!')
             }
-            console.log(body);
+            console.log('/// Adding ' + tempName);
             setTimeout(function() {
               callback(err, body);
             }, 5000);
