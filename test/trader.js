@@ -3,6 +3,7 @@
  * )
  */
 
+var schedule = require('node-schedule');
 var request = require('request');
 var async = require('async');
 var btoa = require('btoa');
@@ -32,7 +33,6 @@ exec("jq '.[0:2]' < trading.json", {
       };
       console.log('=== opp');
 
-
       request({
         url     : site_root,
         method  : 'POST',
@@ -45,9 +45,10 @@ exec("jq '.[0:2]' < trading.json", {
           console.log('Not updated!')
         }
         console.log('/// Adding ' + coin);
-        setTimeout(function () {
+
+        var j = schedule.scheduleJob('*/1 * * * *', function(){
           callback(err, body);
-        }, 5000); // @see https://sheetsu.com/docs/beta#rates
+        }); // @see https://sheetsu.com/docs/beta#rates
 
       });
 
