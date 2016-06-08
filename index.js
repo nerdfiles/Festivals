@@ -4,6 +4,21 @@
  * @license MIT
  * @description
  * Simple interface for scraping everfest.com and recording findings to Google Spreadsheet.
+ *
+ * @example
+ *
+ * Schema:
+ *
+ * $ festivals scrape https://spreadsheet_ipfs_hash/.json <jsonapi_file_input>
+ *
+ * Geodesic:
+ *
+ * $ festivals scrape https://spreadsheet_ipfs_hash/.json <kml_file_input>
+ *
+ * Simple Google Example:
+ *
+ * $ festivals scrape https://sheetsu.com/apis/v1.0/1903d815 ./test/trading.json
+ *
  * )
  */
 
@@ -60,13 +75,15 @@ function __interface__ (config) {
     '--help'       : false,
     '--version'    : false
   };
-  var opts = config || defaultOpts;
 
+  var opts = config || defaultOpts;
   var site_root = 'https://sheetsu.com/apis/v1.0/1903d815';
   var schemaConstruct = opts['<schema_url>'];
 
   if (opts['scrape']) {
+
     var sep = '/';
+
     fs.readFile(__dirname + sep + opts['<file_url>'], "utf8", function (err, data) {
       var site_root = opts['<spreadsheet_url>'];
       if (err)  throw err;
