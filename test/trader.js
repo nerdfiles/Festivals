@@ -20,7 +20,7 @@ var API_SECRET = 'uo63spB5iLYW4ebjtbHmphgs6rmyLMzPbjJGhYui';
 var keyPair = API_KEY + ":" + API_SECRET;
 
 
-var j = schedule.scheduleJob('*/5 * * * * *', function () {
+var j = schedule.scheduleJob('*/3600 * * * * *', function () {
 
 
   exec("cat trading.json", {
